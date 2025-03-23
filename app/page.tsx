@@ -1,6 +1,6 @@
 "use client";
 import { marked } from "marked";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Editor } from "./components/Editor";
 import { Preview } from "./components/Preview";
 
@@ -14,6 +14,11 @@ export default function Home() {
 		handlePreview();
 		setMarkdown(e.target.value);
 	};
+
+	// keyupイベントでプレビューを更新
+	useEffect(() => {
+		handlePreview();
+	}, [markdown]);
 
 	// プレビュー用の関数
 	const handlePreview = async () => {
