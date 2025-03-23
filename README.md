@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Markdown エディタ
 
-## Getting Started
+リアルタイムで Markdown を編集＆プレビューできる、初心者向けのシンプルなエディタです。  
+このプロジェクトは「フルスタックエンジニアを目指す学習ロードマップ」の一部です！
 
-First, run the development server:
+---
+
+## 🚀 使用技術（Tech Stack）
+
+- **フロントエンド**：React + Vite（高速＆シンプルな構成）
+- **スタイリング**：Tailwind CSS（もしくは CSS Modules）
+- **Markdown 変換**：`marked`（または `markdown-it`）
+- **テスト（任意）**：Vitest（軽量なテストツール）
+- **パッケージ管理**：npm / pnpm / yarn（どれでも OK）
+
+---
+
+## 📦 セットアップ手順
 
 ```bash
+# 依存パッケージのインストール
+npm install
+
+# 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 実装する機能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Markdown をリアルタイムでプレビュー
+- エディタとプレビューを左右に分けたレイアウト
+- 読みやすいスタイルのプレビュー表示
+- 初期表示時にサンプル Markdown を表示
+- フロントエンドのみで完結（バックエンドなし）
+- （任意）コピー用ボタンの追加
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✅ やるべきこと（To Do）
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [x] Vite + React プロジェクトの初期化
+- [x] `marked` または `markdown-it` をインストールして設定
+- [ ] Markdown 入力用のコンポーネント作成（`<textarea>`）
+- [ ] HTML プレビュー用のコンポーネント作成（`dangerouslySetInnerHTML` など）
+- [ ] Tailwind CSS や CSS Modules でレイアウト＆装飾
+- [ ] 初期表示時にサンプル Markdown を表示
+- [ ] （任意）コピー用ボタンの実装
+- [ ] （任意）Vitest で簡単なテストを記述
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📁 ディレクトリ構成（例）
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+markdown-editor/
+├── src/
+│   ├── components/
+│   │   ├── Editor.tsx        # Markdown入力エリア
+│   │   └── Preview.tsx       # HTML表示エリア
+│   ├── App.tsx               # アプリ全体
+│   ├── main.tsx              # エントリーポイント
+│   └── index.css             # グローバルCSS（Tailwindならここ）
+├── public/
+├── vite.config.ts
+└── README.md
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🎓 このプロジェクトで学べること
+
+- React の基本的なコンポーネント構造
+- `useState` による状態管理
+- Markdown → HTML の変換処理
+- Tailwind CSS（または CSS Modules）での簡単なレイアウト設計
+- （任意）ユニットテストの書き方
+
+---
+
+## 📝 補足
+
+このアプリは最初の一歩として最適です！
+次のステップでは「入力履歴の保存（バックエンド導入）」や「ユーザー認証」を追加することで、フルスタックの練習につなげることもできます。
