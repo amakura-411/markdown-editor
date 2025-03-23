@@ -27,7 +27,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="flex h-screen">
+		<div className="flex h-screen lg:flex-row flex-col gap-4 pc:gap-0">
 			<Editor markdown={markdown} onChange={handleChange} />
 			<Preview html={html} />
 		</div>

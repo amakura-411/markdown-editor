@@ -1,0 +1,52 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@import "tailwindcss";
+
+@media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+}
+
+* {
+	padding: revert;
+	margin: revert;
+}
+
+/* 見出しのスタイル */
+h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 0.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+h5 {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+li {
+	list-style: disc!important;
+}
+
+.editor-container, .preview-container {
+	margin: 1rem 1.25rem;
+}
